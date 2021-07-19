@@ -1,15 +1,16 @@
-/* You can add global styles to this file, and also import other style files */
-
 $background-color: #fcecd4;
 $main-color: #4a2b05;
 $secondary-color: #ab6311;
-
 
 $main-color-020: #8f632b;
 $main-color-030: #ab6311;
 $main-color-040: #e4ae70;
 $main-color-050: #cf912f;
 $main-color-060: #ac7726;
+
+* {
+  font-family: "Poppins", sans-serif;
+}
 
 html,
 body {
@@ -34,9 +35,18 @@ button {
   color: $main-color;
 
   &:hover {
-      background-color: $main-color-050;
+    background-color: $main-color-050;
   }
 
   &:active {
   }
+}
+
+i {
+  font-size: 24px;
+}
+
+app-book-item {
+  display: block;
+  margin: 32px 16px;
 }

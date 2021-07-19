@@ -1,0 +1,75 @@
+.book {
+  display: flex;
+
+  &-cover {
+    width: 100px;
+    border-radius: 4px;
+    margin-right: 16px;
+  }
+
+  &-info {
+    display: flex;
+    flex-direction: column;
+    color: grey;
+
+    &--rating {
+      display: flex;
+      align-items: center;
+
+      img {
+        width: 20px;
+        filter: invert(28%) sepia(52%) saturate(3035%) hue-rotate(29deg)
+          brightness(105%) contrast(87%);
+        margin-right: 8px;
+      }
+    }
+
+    &--title {
+      color: black;
+    }
+
+    &--author {
+      span {
+        &:first-of-type {
+          margin-right: 8px;
+        }
+        &:last-of-type {
+          color: black;
+          font-weight: bold;
+        }
+      }
+    }
+
+    &--footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      &__price {
+        display: flex;
+        align-items: center;
+
+        .special-price {
+          margin-right: 8px;
+          font-weight: bold;
+        }
+        .has-special {
+          text-decoration: line-through;
+        }
+      }
+
+      &__shop {
+        display: flex;
+        align-items: center;
+
+        i{
+            cursor: pointer;
+        }
+
+        i:not(:last-of-type) {
+            margin-right: 4px;
+        }
+      }
+    }
+  }
+}

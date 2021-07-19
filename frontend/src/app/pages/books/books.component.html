@@ -1,1 +1,5 @@
-<p>books works!</p>
+<h1>Available books</h1>
+
+<div class="books">
+    <app-book-item *ngFor="let book of books" [book]="book"></app-book-item>
+</div>
