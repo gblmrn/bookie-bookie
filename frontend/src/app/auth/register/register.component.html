@@ -1,1 +1,22 @@
-<p>register works!</p>
+<form [formGroup]="registerFormGroup">
+    <img src="assets/favicon.png" alt="">
+
+    <h1>Register</h1>
+    <mat-form-field appearance="outline">
+        <mat-label>Full name</mat-label>
+        <input matInput formControlName="fullName" placeholder="Full name">
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+        <mat-label>Username</mat-label>
+        <input matInput formControlName="username" placeholder="Username">
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+        <mat-label>Password</mat-label>
+        <input matInput formControlName="password" placeholder="Password">
+    </mat-form-field>
+
+    <button (click)="registerClicked()">Create new account</button>
+    <a routerLink="/auth/login">Already have an account? Login</a>
+</form>

@@ -13,7 +13,7 @@ const routes: Routes = [
   },
   {
     path: '**',
-    redirectTo: 'page/books'
+    redirectTo: 'auth/login'
   }
 ];
 

@@ -1,1 +1,17 @@
-<p>login works!</p>
+<form [formGroup]="loginFormGroup">
+    <img src="assets/favicon.png" alt="">
+
+    <h1>Login</h1>
+    <mat-form-field appearance="outline">
+        <mat-label>Username</mat-label>
+        <input matInput formControlName="username" placeholder="Username">
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+        <mat-label>Password</mat-label>
+        <input matInput formControlName="password" placeholder="Password">
+    </mat-form-field>
+
+    <button (click)="loginClicked()">Login</button>
+    <a routerLink="/auth/register">New here? Create new account</a>
+</form>

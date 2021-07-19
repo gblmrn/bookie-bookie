@@ -9,7 +9,6 @@ const routes: Routes = [
     {
         path: '',
         component: AuthComponent,
-        redirectTo: 'login',
         children: [
             {
                 path: 'login',
@@ -18,6 +17,10 @@ const routes: Routes = [
             {
                 path: 'register',
                 component: RegisterComponent
+            },
+            {
+                path: '',
+                redirectTo: 'login'
             }
         ],
     },

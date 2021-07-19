@@ -2,6 +2,7 @@ import { AppComponent } from './app.component';
 import { AppRoutes } from './app.routes';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -9,7 +10,8 @@ import { NgModule } from '@angular/core';
   ],
   imports: [
     BrowserModule,
-    AppRoutes
+    AppRoutes,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
