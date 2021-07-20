@@ -24,6 +24,16 @@ const userRoutes = require("./src/routes/user.routes");
 // using as middleware
 app.use("/api/users", userRoutes);
 
+// auth server api
+app.get("/api/auth/login", (req, res) => {
+  res.send("Auth api is working")
+});
+
+// auth server api
+app.get("/api/auth/register", (req, res) => {
+  res.send("Register api is working")
+});
+
 // listen for requests
 app.listen(port, () => {
   console.log(`Server is listening on port ${port}`);
