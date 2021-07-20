@@ -1,1 +1,75 @@
-<p>book-details works!</p>
+<div class="nav">
+    <i class="las la-arrow-left" routerLink="../"></i>
+</div>
+
+<div *ngIf="book" class="book-details">
+    <div class="headline">
+        <img [src]="book.coverImage" class="headline-cover">
+        <div class="headline-info">
+            <div>
+                <h1 class="headline-info--title">{{ book.title }}</h1>
+                <span class="headline-info--author">
+                    <span>Author</span>
+                    <span>{{ book.author }}</span>
+                </span>
+
+                <h1 class="headline-info--price">
+                    <span *ngIf="book.specialPrice" class="special-price">{{ book.specialPrice }} Lei</span>
+                    <span [class.has-special]="book.specialPrice">{{ book.price }} Lei</span>
+                </h1>
+
+                <div class="headline-info--description"> Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Corporis,
+                    molestias ducimus repudiandae deleniti illum quos! Tenetur laudantium nostrum, officia odit
+                    voluptates
+                    magnam excepturi labore porro, eum est consectetur, nesciunt in?</div>
+            </div>
+
+            <div>
+                <div class="headline-info--rating">
+                    <img src="assets/bean.png">
+                    <span>{{ book.ratingScore }}/ 5</span>
+                    ―
+                    <span>{{ book.totalRating }} Ratings</span>
+                </div>
+
+                <div class="headline-info--shop">
+                    <i class="las la-shopping-cart"></i>
+                    <i (click)="isFavorite = !isFavorite" class="las"
+                        [ngClass]="isFavorite ? 'la-heart' : 'la-heart-broken'"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="comments">
+        <h1>Comments</h1>
+
+
+        <div *ngFor="let c of [1,2,3]" class="comment">
+            <div class="comment-headline">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ87sUZnVCOsj59Mp-kdTQxaTpIUP_j9Do7uqCB-BdrzQUZU8myQ4zQ0noidkNenCyS1c0&usqp=CAU">
+
+                <div class="comment-headline--right">
+                    <div>
+                        <span class="comment-headline--author">Mark Twain </span>
+                        <span class="comment-headline--date">― 23-06-2021</span>
+                    </div>
+
+                    <div class="comment-headline--rate">
+                        <i class="las la-thumbs-up"></i>
+                        <i class="las la-thumbs-down"></i>
+                    </div>
+                </div>
+
+
+            </div>
+
+            <div class="comment-message">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Mollitia sequi, iste laborum ipsum inventore
+                aperiam cumque! Consequatur, aliquam veniam aperiam, possimus voluptas minus debitis suscipit,
+                voluptatem earum nihil illum deleniti.
+            </div>
+        </div>
+    </div>
+</div>

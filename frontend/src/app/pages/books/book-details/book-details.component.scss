@@ -1,0 +1,132 @@
+@import "src/styles";
+
+.nav {
+  max-width: 1220px;
+  margin: 32px auto;
+
+  i {
+    font-size: 32px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+
+    &:hover {
+      color: black;
+    }
+  }
+}
+
+.book-details {
+  max-width: 1220px;
+  margin: 120px auto;
+
+  .headline {
+    display: flex;
+
+    &-cover {
+      width: 300px;
+      border-radius: 4px;
+      margin-right: 32px;
+    }
+
+    &-info {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      &--title {
+        margin: 0;
+      }
+
+      &--author {
+        span {
+          &:first-of-type {
+            color: grey;
+            margin-right: 8px;
+          }
+          &:last-of-type {
+            color: black;
+            font-weight: bold;
+          }
+        }
+      }
+
+      &--price {
+        color: $main-color-030;
+        font-size: 46px;
+        font-weight: normal;
+        margin-top: 0;
+
+        .special-price {
+          margin-right: 8px;
+          font-weight: bold;
+        }
+
+        .has-special {
+          text-decoration: line-through;
+          color: grey;
+        }
+      }
+
+      &--rating {
+        display: flex;
+        align-items: center;
+
+        img {
+          width: 20px;
+          filter: invert(28%) sepia(52%) saturate(3035%) hue-rotate(29deg)
+            brightness(105%) contrast(87%);
+          margin-right: 8px;
+        }
+      }
+
+      &--shop {
+        i {
+          cursor: pointer;
+        }
+
+        i:not(:last-of-type) {
+          margin-right: 4px;
+        }
+      }
+    }
+  }
+
+  // I will move it to separate component
+
+  .comment {
+    margin-bottom: 32px;
+
+    &-headline {
+      display: flex;
+      align-items: flex-start;
+
+      img {
+        width: 64px;
+        height: 64px;
+        border-radius: 8px;
+
+        margin-right: 32px;
+      }
+
+      &--date {
+        margin-left: 8px;
+        color: grey;
+      }
+
+      &--rate {
+        i {
+          color: grey;
+
+          &:hover {
+            color: $main-color-030;
+          }
+        }
+      }
+    }
+    &-message {
+      margin-top: 16px;
+      color: grey;
+      text-indent: 32px;
+    }
+  }
+}

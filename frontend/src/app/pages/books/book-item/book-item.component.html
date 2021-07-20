@@ -2,22 +2,23 @@
     <img [src]="book.coverImage" class="book-cover">
 
     <div class="book-info">
-
-        <div class="book-info--rating">
-            <img src="assets/bean.png">
-            <span>{{ book.ratingScore }}/ 5</span>
-            ―
-            <span>{{ book.totalRating }} Ratings</span>
+        <div>
+            <div class="book-info--rating">
+                <img src="assets/bean.png">
+                <span>{{ book.ratingScore }}/ 5</span>
+                ―
+                <span>{{ book.totalRating }} Ratings</span>
+            </div>
+    
+            <h2 class="book-info--title">
+                {{ book.title }}
+            </h2>
+    
+            <span class="book-info--author">
+                <span>Author</span>
+                <span>{{ book.author }}</span>
+            </span>
         </div>
-
-        <h2 class="book-info--title">
-            {{ book.title }}
-        </h2>
-
-        <span class="book-info--author">
-            <span>Author</span>
-            <span>{{ book.author }}</span>
-        </span>
 
         <div class="book-info--footer">
             <span class="book-info--footer__price">
@@ -27,7 +28,8 @@
 
             <div class="book-info--footer__shop">
                 <i class="las la-shopping-cart"></i>
-                <i (click)="isFavorite = !isFavorite" class="las" [ngClass]="isFavorite ? 'la-heart' : 'la-heart-broken'"></i>
+                <i (click)="isFavorite = !isFavorite" class="las"
+                    [ngClass]="isFavorite ? 'la-heart' : 'la-heart-broken'"></i>
             </div>
         </div>
 

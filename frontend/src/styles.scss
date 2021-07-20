@@ -12,6 +12,10 @@ $main-color-060: #ac7726;
   font-family: "Poppins", sans-serif;
 }
 
+i {
+  font-family: 'Line Awesome Free' !important;
+}
+
 html,
 body {
   height: 100%;
@@ -49,4 +53,7 @@ i {
 app-book-item {
   display: block;
   margin: 32px 16px;
+  width: 29%;
+  max-width: 29%;
+  min-width: 29%;
 }
