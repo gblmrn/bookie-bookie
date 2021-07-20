@@ -5,23 +5,29 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from "@angular/material/icon";
 import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from "@angular/material/select";
+import { NavbarComponent } from './../components/navbar/navbar.component';
 import { NgModule } from '@angular/core';
+import { RouterModule } from '@angular/router';
 
-export const AngularMaterialModules = [
+export const ANGULAR_MATERIAL_MODULES = [
   MatButtonModule,
   MatInputModule,
   MatSelectModule,
   MatIconModule
 ];
 
+export const COMPONENTS = [
+  NavbarComponent
+]
 @NgModule({
-  declarations: [],
+  declarations: [...COMPONENTS],
   imports: [
-    AngularMaterialModules,
+    ANGULAR_MATERIAL_MODULES,
     CommonModule,
-    HttpClientModule
+    HttpClientModule,
+    RouterModule
   ],
   providers: [AuthService],
-  exports: [AngularMaterialModules]
+  exports: [...ANGULAR_MATERIAL_MODULES, ...COMPONENTS]
 })
 export class SharedModule { }

@@ -1,5 +1,6 @@
 import { RouterModule, Routes } from '@angular/router';
 
+import { ContactComponent } from './contact/contact.component';
 import { NgModule } from '@angular/core';
 
 const routes: Routes = [
@@ -9,13 +10,18 @@ const routes: Routes = [
             {
                 path: 'books',
                 loadChildren: () => import('./books/books.module').then(m => m.BooksModule)
+            },
+            {
+                path: 'contact',
+                component: ContactComponent
+            },
+            {
+                path: '**',
+                redirectTo: '/auth/login'
             }
         ]
     },
-    {
-        path: '**',
-        redirectTo: '/auth/login'
-    }
+   
 
 ];
 
