@@ -1,4 +1,8 @@
-<h1>Available books</h1>
+<div class="search">
+    <input #searchTextRef [(ngModel)]="searchText" (ngModelChange)="onSearch($event)" type="text">
+    <i class="las la-search"></i>
+    <i *ngIf="searchText" (click)="onClearSearch()" class="las la-times"></i>
+</div>
 
 <div class="books">
     <app-book-item *ngFor="let book of books" [book]="book" [routerLink]="book.id"></app-book-item>
