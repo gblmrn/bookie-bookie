@@ -13,8 +13,8 @@ var User = function(user){
   this.createdAt     = new Date();
   this.updatedAt     = new Date();
 };
-User.create = function (newEmp, result) {
-dbConn.query("INSERT INTO users set ?", newEmp, function (err, res) {
+User.create = function (newUsr, result) {
+dbConn.query("INSERT INTO users set ?", newUsr, function (err, res) {
 if(err) {
   console.log("error: ", err);
   result(err, null);

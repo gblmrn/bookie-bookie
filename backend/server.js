@@ -20,9 +20,11 @@ app.get("/", (req, res) => {
 
 // Require user routes
 const userRoutes = require("./src/routes/user.routes");
+const bookRoutes = require("./src/routes/book.routes");
 
 // using as middleware
 app.use("/api/users", userRoutes);
+app.use("/api/books", bookRoutes);
 
 // auth server api
 app.get("/api/auth/login", (req, res) => {
