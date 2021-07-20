@@ -5,6 +5,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from "@angular/material/icon";
 import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from "@angular/material/select";
+import {MatSlideToggleModule} from '@angular/material/slide-toggle';
 import { NavbarComponent } from './../components/navbar/navbar.component';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
@@ -13,7 +14,8 @@ export const ANGULAR_MATERIAL_MODULES = [
   MatButtonModule,
   MatInputModule,
   MatSelectModule,
-  MatIconModule
+  MatIconModule,
+  MatSlideToggleModule
 ];
 
 export const COMPONENTS = [

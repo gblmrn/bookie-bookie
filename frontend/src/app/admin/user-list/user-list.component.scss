@@ -1,0 +1,10 @@
+@import "src/styles";
+
+input {
+  border: none;
+  outline: none;
+  background-color: transparent;
+  border-bottom: 1px solid $main-color-030;
+  font-size: 18px;
+  letter-spacing: 1.4;
+}

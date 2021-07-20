@@ -1,0 +1,27 @@
+.user-details {
+
+    &--headline {
+        display: flex;
+        align-items: flex-start;
+        line-height: 1;
+        margin-top: 16px;
+
+        img {
+            width: 80px;
+            height: 80px;
+            border-radius: 8px;
+            margin-right: 8px;
+        }
+
+        h1, h4 {
+            margin: 0;
+            padding: 0;
+        }
+
+        &__info {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+    
+}

@@ -1,0 +1,31 @@
+    <input #searchTextRef [(ngModel)]="searchText" (ngModelChange)="onSearch($event)" type="text">
+
+<table>
+    <thead>
+        <th></th>
+        <th>Full name</th>
+        <th>Username</th>
+        <th>E-mail</th>
+        <th>Is Active</th>
+        <th>Created on</th>
+        <th>Last update</th>
+    </thead>
+
+    <tbody> 
+        <tr *ngFor="let user of users" [routerLink]="user.id">
+            <td>
+                <img [src]="user.avatarUrl">
+            </td>
+            <td>{{ user.fullName }}</td>
+            <td>{{ user.username }}</td>
+            <td>{{ user.email }}</td>
+            <td class="center">
+               <i *ngIf="user.isActive" class="la la-check"></i>
+               <i *ngIf="!user.isActive" class="la la-times"></i>
+            </td>
+            <td>{{ user.createdOn | date: 'dd/MM/yyyy' }}</td>
+            <td>{{ user.lastUpdateOn | date: 'dd/MM/yyyy' }}</td>
+        </tr>
+    </tbody>
+</table>
+

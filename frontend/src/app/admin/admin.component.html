@@ -1,0 +1,13 @@
+<div class="admin">
+    <div class="admin-panel">
+        <h1>ADMIN</h1>
+        <ul>
+            <li [routerLink]="['/admin/users']" [routerLinkActive]="'active'">USERS</li>
+            <li [routerLink]="['/admin/books']" [routerLinkActive]="'active'">BOOKS</li>
+        </ul>
+    </div>
+
+    <div class="admin-content">
+        <router-outlet></router-outlet>
+    </div>
+</div>

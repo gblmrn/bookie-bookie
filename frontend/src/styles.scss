@@ -13,7 +13,11 @@ $main-color-060: #ac7726;
 }
 
 i {
-  font-family: 'Line Awesome Free' !important;
+  font-family: "Line Awesome Free" !important;
+}
+
+img {
+  object-fit: cover;
 }
 
 html,
@@ -42,8 +46,6 @@ button {
     background-color: $main-color-050;
   }
 
-  &:active {
-  }
 }
 
 i {
@@ -56,4 +58,123 @@ app-book-item {
   width: 29%;
   max-width: 29%;
   min-width: 29%;
+}
+
+.search {
+  display: flex;
+
+  position: relative;
+
+  max-width: 400px;
+  margin: 100px auto;
+
+  input {
+    width: 300px;
+    padding: 16px 48px;
+    border: 1px solid $main-color-030;
+    caret-color: $main-color-030;
+    border-radius: 8px;
+    background-color: transparent;
+    font-size: 20px;
+    letter-spacing: 1.4;
+
+    &:focus,
+    &:hover,
+    &:active {
+      border: 1px solid $main-color;
+      outline: none;
+    }
+  }
+
+  i {
+    font-size: 24px;
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%) scaleX(1);
+    transform: translateY(-50%) scaleX(1);
+    border: none;
+
+    &.la-times {
+      right: 8px;
+      cursor: pointer;
+    }
+
+    &.la-search {
+      left: 8px;
+      -webkit-transform: translateY(-50%) scaleX(-1);
+      transform: translateY(-50%) scaleX(-1);
+    }
+  }
+
+  &.small {
+    padding: 8px 48px;
+    margin: 0;
+
+    input {
+      font-size: 16px;
+    }
+
+    i {
+      &.la-times {
+        right: 56px;
+      }
+
+      &.la-search {
+        left: 56px;
+      }
+    }
+  }
+}
+
+// move it to styles/components
+table {
+  border-collapse: collapse;
+  // border: 1px dotted $main-color-040;
+  border-radius: 8px;
+  margin-top: 32px;
+
+  thead {
+    th {
+      padding: 8px;
+      padding-top: 12px;
+      padding-bottom: 12px;
+      text-align: left;
+    }
+  }
+
+  tbody {
+    tr {
+      border-top: 1px dotted $main-color-040;
+      cursor: pointer;
+
+      &:hover {
+
+        background-color: #efdec5;
+      }
+
+
+      td {
+        padding: 4px 8px;
+
+        img {
+          width: 44px;
+          height: 44px;
+          object-fit: cover;
+          border-radius: 4px;
+        }
+
+        .la-check {
+          color: green;
+        }
+
+        .la-times {
+          color: red;
+        }
+
+        &.center {
+          text-align: center;
+        }
+      }
+    }
+  }
 }
