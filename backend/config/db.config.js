@@ -9,6 +9,7 @@ const dbConn = mysql.createConnection({
   user: "root",
   password: "Parola",
   database: "knexseed",
+  ssl: false
 });
 
 dbConn.connect(function (err) {
