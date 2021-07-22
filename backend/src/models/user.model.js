@@ -2,16 +2,12 @@
 var dbConn = require('./../../config/db.config');
 //User object create
 var User = function(user){
-  this.firstName     = user.firstName;
-  this.lastName      = user.lastName;
-  this.email          = user.email;
-  this.phone          = user.phone;
-  this.organization   = user.organization;
-  this.designation    = user.designation;
-  this.salary         = user.salary;
-  this.status         = user.status ? user.status : 1;
-  this.createdAt     = new Date();
-  this.updatedAt     = new Date();
+  this.firstName = user.firstName;
+  this.lastName = user.lastName;
+  this.username = user.username;
+  this.email = user.email;
+  this.createdAt = new Date();
+  this.updatedAt = new Date();
 };
 User.create = function (newUsr, result) {
 dbConn.query("INSERT INTO users set ?", newUsr, function (err, res) {
@@ -49,7 +45,7 @@ else{
 });
 };
 User.update = function(id, user, result){
-dbConn.query("UPDATE users SET firstName=?,lastName=?,email=?,phone=?,organization=?,designation=?,salary=? WHERE id = ?", [user.firstName,user.lastName,user.email,user.phone,user.organization,user.designation,user.salary, id], function (err, res) {
+dbConn.query("UPDATE users SET firstName=?,lastName=?, username =?, email=? WHERE id = ?", [user.firstName,user.lastName, user.username, user.email, id], function (err, res) {
 if(err) {
   console.log("error: ", err);
   result(null, err);

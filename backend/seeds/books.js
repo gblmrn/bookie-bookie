@@ -1,19 +1,18 @@
 var faker = require('faker');
 
 let createRecord = (knex, id) => {
-  return knex('users').insert({
+  return knex('books').insert({
     id,
-    firstName: faker.name.firstName(),
-    lastName: faker.name.lastName(),
-    username: faker.internet.userName(),
-    email: faker.internet.exampleEmail(),
+    title: faker.random.words(),
+    author: faker.name.firstName(),
+    releaseDate: new Date(),
     created_at: new Date(),
     updated_at: new Date()
   })
 }
 
 exports.seed = (knex) => {
-  return knex('users').del()
+  return knex('books').del()
     .then(() => {
       let records = [];
 
@@ -24,4 +23,3 @@ exports.seed = (knex) => {
       return Promise.all(records);
     });
 };
-

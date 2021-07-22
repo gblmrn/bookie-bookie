@@ -8,7 +8,7 @@ const dbConn = mysql.createConnection({
   host: "localhost",
   user: "root",
   password: "Parola",
-  database: "node_mysql_crud_db",
+  database: "knexseed",
 });
 
 dbConn.connect(function (err) {
