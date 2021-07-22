@@ -1,5 +1,23 @@
-<div class="search">
-    <input #searchTextRef [(ngModel)]="searchText" (ngModelChange)="onSearch($event)" type="text">
-    <i class="las la-search"></i>
-    <i *ngIf="searchText" (click)="onClearSearch()" class="las la-times"></i>
-</div>
+<input #searchTextRef [(ngModel)]="searchText" (ngModelChange)="onSearch($event)" type="text">
+
+<table>
+    <thead>
+        <th>ID</th>
+        <th>Title</th>
+        <th>Author</th>
+        <th>Released</th>
+        <th>createdAt</th>
+        <th>updatedAt</th>
+    </thead>
+
+    <tbody> 
+        <tr *ngFor="let book of books" (click)="editBook(book)">
+            <td>{{ book.id }}</td>
+            <td>{{ book.title }}</td>
+            <td>{{ book.author }}</td>
+            <td>{{ book.releaseDate }}</td>
+            <td>{{ book.created_at | date: 'dd/MM/yyyy' }}</td>
+            <td>{{ book.updated_at | date: 'dd/MM/yyyy' }}</td>
+        </tr>
+    </tbody>
+</table>

@@ -9,6 +9,7 @@ import { SharedModule } from './../shared/shared.module';
 import { UserDetailsComponent } from './user-list/user-details/user-details.component';
 import { UserEditComponent } from './user-list/user-edit/user-edit.component';
 import { UserListComponent } from './user-list/user-list.component';
+import { BookEditComponent } from './book-list/book-edit/book-edit.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { UserListComponent } from './user-list/user-list.component';
     UserListComponent,
     BookListComponent,
     UserDetailsComponent,
-    UserEditComponent
+    UserEditComponent,
+    BookEditComponent
   ],
   imports: [
     CommonModule,
