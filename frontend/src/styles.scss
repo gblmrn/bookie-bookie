@@ -1,12 +1,4 @@
-$background-color: #fcecd4;
-$main-color: #4a2b05;
-$secondary-color: #ab6311;
-
-$main-color-020: #8f632b;
-$main-color-030: #ab6311;
-$main-color-040: #e4ae70;
-$main-color-050: #cf912f;
-$main-color-060: #ac7726;
+@import 'main';
 
 * {
   font-family: "Poppins", sans-serif;
@@ -28,24 +20,6 @@ body {
   margin: 0;
   font-family: Roboto, "Helvetica Neue", sans-serif;
   background-color: $background-color;
-}
-
-button {
-  border-radius: 8px;
-  width: 100%;
-  border: none;
-  border-radius: 8px;
-  padding: 16px 32px;
-  font-size: 20px;
-  transition: all 0.2 ease-in-out;
-  cursor: pointer;
-  background-color: $main-color-040;
-  color: $main-color;
-
-  &:hover {
-    background-color: $main-color-050;
-  }
-
 }
 
 i {
@@ -148,10 +122,8 @@ table {
       cursor: pointer;
 
       &:hover {
-
         background-color: #efdec5;
       }
-
 
       td {
         padding: 4px 8px;
@@ -178,3 +150,4 @@ table {
     }
   }
 }
+

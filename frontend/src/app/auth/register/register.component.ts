@@ -16,7 +16,7 @@ export class RegisterComponent implements OnInit {
     this.registerFormGroup = fb.group({
       username: fb.control(null, Validators.required),
       password: fb.control(null, Validators.required),
-      fullName: fb.control(null, Validators.required),
+      firstName: fb.control(null, Validators.required),
     });
    }
 

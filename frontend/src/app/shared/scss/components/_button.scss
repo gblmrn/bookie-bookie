@@ -1,0 +1,33 @@
+@import '../colors';
+
+button {
+    border-radius: 8px;
+    width: 100%;
+    border: none;
+    border-radius: 8px;
+    padding: 16px 32px;
+    font-size: 20px;
+    transition: all 0.2 ease-in-out;
+    cursor: pointer;
+    background-color: $main-color-040;
+    color: $main-color;
+    outline: none;
+
+    &.small {
+        padding: 8px 16px;
+        font-size: 18px;
+    }
+  
+    &:hover {
+      background-color: $main-color-050;
+    }
+
+    &.success {
+        background-color: $main-color;
+        color: white;
+    }
+  
+    &.error {
+        
+    }
+  }

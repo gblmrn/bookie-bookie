@@ -1,0 +1,35 @@
+<div class="modal">
+    <div class="modal-header">
+        <h3>Edit user</h3>
+        <i class="la la-times"></i>
+    </div>
+
+    <div *ngIf="user" class="modal-content">
+        <form [formGroup]="userFormGroup">
+            <img [src]="user.avatarUrl">
+
+            <mat-form-field appearance="outline">
+                <mat-label>Full name</mat-label>
+                <input matInput formControlName="firstName" placeholder="Full name">
+            </mat-form-field>
+
+            <mat-form-field appearance="outline">
+                <mat-label>Username</mat-label>
+                <input matInput formControlName="username" placeholder="Username">
+            </mat-form-field>
+
+            <mat-form-field appearance="outline">
+                <mat-label>E-mail</mat-label>
+                <input matInput formControlName="email" placeholder="E-mail">
+            </mat-form-field>
+
+            <mat-slide-toggle formControlName="isActive"></mat-slide-toggle>
+        </form>
+    </div>
+
+    <div class="modal-footer">
+        <button class="success small">Save</button>
+        <button class="small" (click)="close()">Cancel</button>
+    </div>
+
+</div>

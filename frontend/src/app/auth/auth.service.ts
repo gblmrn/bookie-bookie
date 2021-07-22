@@ -8,7 +8,7 @@ export interface LoginUserDto {
 }
 
 export interface RegisterUserDto {
-    fullName: string;
+    firstName: string;
     username: string;
     password: string;
 }

@@ -1,0 +1,32 @@
+.modal {
+    display: flex;
+    flex-direction: column;
+
+    &-header{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        h3 {
+            margin: 0;
+        }
+
+        i {
+            transition: all 0.2s ease-in-out;
+            &:hover {
+                color: black;
+            }
+        }
+    }
+
+    &-content{}
+
+    &-footer{
+        display: flex;
+        align-items: center;
+
+        button {
+            margin: 0 8px;
+        }
+    }
+}

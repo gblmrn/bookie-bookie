@@ -1,25 +1,30 @@
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
 import { AdminComponent } from './admin.component';
 import { AdminRoutes } from './admin.routes';
 import { BookListComponent } from './book-list/book-list.component';
 import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
 import { SharedModule } from './../shared/shared.module';
-import { UserListComponent } from './user-list/user-list.component';
 import { UserDetailsComponent } from './user-list/user-details/user-details.component';
+import { UserEditComponent } from './user-list/user-edit/user-edit.component';
+import { UserListComponent } from './user-list/user-list.component';
 
 @NgModule({
   declarations: [
     AdminComponent,
     UserListComponent,
     BookListComponent,
-    UserDetailsComponent
+    UserDetailsComponent,
+    UserEditComponent
   ],
   imports: [
     CommonModule,
     AdminRoutes,
-    FormsModule,
+    FormsModule, 
+    ReactiveFormsModule,
     SharedModule
-  ]
+  ],
+  entryComponents: [UserEditComponent]
 })
 export class AdminModule { }

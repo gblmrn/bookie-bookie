@@ -1,14 +1,10 @@
 <div *ngIf="user" class="user-details">
-
     <div class="user-details--headline">
         <img [src]="user.avatarUrl" alt="">
 
         <div class="user-details--headline__info">
-            <h1>{{ user.fullName }}</h1>
+            <h1>{{ user.firstName }}</h1>
             <h4>{{ user.username }}</h4>
         </div>
     </div>
-
-
-   
 </div>

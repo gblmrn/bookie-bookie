@@ -1,14 +1,22 @@
 export interface User {
     id: string;
     username: string;
-    fullName: string;
+    firstName: string;
+    lastName: string;
     email: string;
-    password?: string;
-    salt?: string;
     avatarUrl: string;
-    favoriteBooks?: string[];
-    purchasedBooks?: string[];
+    phone: string;
+    favoriteBooks: string[];
+    purchasedBooks: string[];
     createdOn?: Date;
-    lastUpdateOn?: Date;
+    updatedAt?: Date;
     isActive: boolean;
+    role: Role;
 }
+
+export enum Role {
+    USER = 'USER',
+    ADMIN = 'ADMIN'
+}
+
+
