@@ -1,5 +1,5 @@
-"use strict";
 const User = require("../models/user.model");
+
 exports.findAll = function (req, res) {
   User.findAll(function (err, user) {
     if (err) {
