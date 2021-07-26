@@ -9,12 +9,11 @@ import { User } from '../../../shared/models/user';
   styleUrls: ['./user-edit.component.scss']
 })
 export class UserEditComponent implements OnInit {
-  user: User | undefined;
   userFormGroup: FormGroup;
 
   constructor(
     public dialogRef: MatDialogRef<UserEditComponent>,
-    @Inject(MAT_DIALOG_DATA) public data: any,
+    @Inject(MAT_DIALOG_DATA) public data: { user: User },
     private fb: FormBuilder) {
     this.userFormGroup = this.fb.group({
       firstName: this.fb.control(null, Validators.required),
@@ -42,7 +41,7 @@ export class UserEditComponent implements OnInit {
 
   private patchFormGroup(): void {
     this.userFormGroup.patchValue({
-      ...this.user,
+      ...this.data.user,
       updatedAt: new Date()
     });
   }

@@ -1,12 +1,16 @@
 <div class="modal">
     <div class="modal-header">
         <h3>Edit user</h3>
-        <i class="la la-times"></i>
+        <i (click)="close()" class="la la-times"></i>
     </div>
 
-    <div *ngIf="user" class="modal-content">
+    <div *ngIf="data.user as user" class="modal-content">
         <form [formGroup]="userFormGroup">
-            <img [src]="user.avatarUrl">
+
+            <div class="avatar">
+                <img [src]="user.avatarUrl">
+                <i class="la la-pen"></i>
+            </div>
 
             <mat-form-field appearance="outline">
                 <mat-label>Full name</mat-label>
@@ -23,7 +27,10 @@
                 <input matInput formControlName="email" placeholder="E-mail">
             </mat-form-field>
 
-            <mat-slide-toggle formControlName="isActive"></mat-slide-toggle>
+            <div class="active">
+                <mat-slide-toggle formControlName="isActive">User activ</mat-slide-toggle>
+                
+            </div>
         </form>
     </div>
 

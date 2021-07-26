@@ -1,1 +1,58 @@
-<p>book-edit works!</p>
+<div class="modal">
+    <div class="modal-header">
+        <h3>Edit user</h3>
+        <i (click)="close()" class="la la-times"></i>
+    </div>
+
+    <div *ngIf="data.book as book" class="modal-content">
+        <form [formGroup]="bookFormGroup">
+
+            <div class="avatar">
+                <img [src]="book.coverImage">
+                <i class="la la-pen"></i>
+            </div>
+
+            <mat-form-field appearance="outline">
+                <mat-label>Title</mat-label>
+                <input matInput formControlName="title" placeholder="Title">
+            </mat-form-field>
+
+            <mat-form-field appearance="outline">
+                <mat-label>Author</mat-label>
+                <input matInput formControlName="author" placeholder="Author">
+            </mat-form-field>
+
+            <div class="split">
+                <mat-form-field appearance="outline">
+                    <mat-label>Price</mat-label>
+                    <input matInput formControlName="price" type="number" placeholder="Price">
+                </mat-form-field>
+
+                <mat-form-field appearance="outline">
+                    <mat-label>Special price</mat-label>
+                    <input matInput formControlName="specialPrice" type="number" placeholder="Special price">
+                </mat-form-field>
+            </div>
+
+            <mat-form-field appearance="outline">
+                <mat-label>Tags</mat-label>
+                <input matInput formControlName="tags" placeholder="Tags">
+            </mat-form-field>
+
+            <mat-form-field appearance="outline">
+                <mat-label>Category</mat-label>
+                <mat-select>
+                    <mat-option *ngFor="let category of categories" [value]="category">
+                        {{ category }}
+                    </mat-option>
+                </mat-select>
+            </mat-form-field>
+        </form>
+    </div>
+
+    <div class="modal-footer">
+        <button class="success small">Save</button>
+        <button class="small" (click)="close()">Cancel</button>
+    </div>
+
+</div>
